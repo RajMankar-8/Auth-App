@@ -1,24 +1,34 @@
-# README
+# Auth-App API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A RESTful API built with **Ruby on Rails** that supports full **CRUD operations** on companies, with **JWT-based authentication** using **Devise** and **role-based authorization** using **CanCanCan**.
 
-Things you may want to cover:
+---
 
-* Ruby version
+## 🚀 Features
 
-* System dependencies
+- User registration & login with **Devise + JWT**
+- Role-based access control using **CanCanCan**
+- Companies CRUD (Create, Read, Update, Delete)
+- Clean API structure with `Api::V1` namespace
+- Error handling with proper status codes
+- Protected routes for authenticated users
 
-* Configuration
+---
 
-* Database creation
+## 🔐 Tech Stack
 
-* Database initialization
+- **Ruby on Rails** (API mode)
+- **Devise** – for user authentication
+- **JWT** – for token-based auth
+- **CanCanCan** – for role-based authorization
+- **PostgreSQL** (or SQLite for local)
+- **Puma** – web server
+- **RSpec** (optional for testing)
 
-* How to run the test suite
+---
 
-* Services (job queues, cache servers, search engines, etc.)
+## 🧠 User Roles
 
-* Deployment instructions
-
-* ...
+You can define roles in the `User` model like:
+```ruby
+ROLES = %w{super_admin admin user editor collaborator}
