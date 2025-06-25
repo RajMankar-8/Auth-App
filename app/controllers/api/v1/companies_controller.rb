@@ -19,7 +19,6 @@ class Api::V1::CompaniesController < ApiController
 	end
 
 	def show
-        render json: @company, status: :ok
 	end
 
 	def update
