@@ -12,6 +12,19 @@ A RESTful API built with **Ruby on Rails** that supports full **CRUD operations*
 - Clean API structure with `Api::V1` namespace
 - Error handling with proper status codes
 - Protected routes for authenticated users
+- **JSON rendering using Jbuilder & ActiveModel::Serializer**
+
+---
+
+## 📦 JSON Rendering
+
+- **Jbuilder** is used for rendering `Company` JSON responses (`show`, `index`) with customized structure.
+- **ActiveModel::Serializer (AMS)** is used for `Post` API responses, including:
+  - Nested associations (`Post` with `User`)
+  - Custom computed fields (e.g., `summary`)
+  - Conditional attribute rendering based on `current_user` (e.g., hide user email if not admin)
+  - Pagination-ready metadata and root keys in responses
+- Optimized with `includes(:user)` to avoid N+1 queries.
 
 ---
 
